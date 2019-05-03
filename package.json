@@ -1,0 +1,23 @@
+{
+  "name": "workbox-npm-script",
+  "version": "0.0.1",
+  "description": "The starting point for the official Workbox tutorial for NPM Script projects.",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm run build && node server.js",
+    "clean": "rm -rf dist && mkdir dist",
+    "copy": "cp src/* dist/",
+    "build": "npm run clean && npm run copy && workbox injectManifest"
+  },
+  "dependencies": {
+    "express": "^4.16.1",
+    "workbox-cli": "^4.3.1"
+  },
+  "engines": {
+    "node": "8.1.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/workbox-npm-script"
+  },
+  "license": "Apache-2.0"
+}
