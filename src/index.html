@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Get Started With Workbox For NPM Script</title>
+  </head>
+  <body>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="https://static.flyinstatic.com/common/themes/globalFunction.v26484.js"></script>
+    <script>
+    // Check for browser support of service worker
+    if ('serviceWorker' in window.navigator) {
+      window.addEventListener('load', function () {
+        window.navigator.serviceWorker
+          .register('/sw.js', { scope: '/' })
+          .then(function (registration) {
+            console.log(
+              'ServiceWorker registration successful with scope: ',
+              registration.scope
+            )
+          })
+          .catch(function (error) {
+            console.error('ServiceWorker registration failed: ', error)
+          })
+      })
+    }
+      
+  </script>
+  </body>
+</html>
